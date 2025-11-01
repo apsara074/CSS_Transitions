@@ -1,0 +1,37 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    width: 100%;
+    height: 100vh; 
+    background-color: black;
+}
+#container{
+    width: 60px;
+    height: 60px;
+    background-image: url(../../asset/img/ball.png);
+    /* background-image: linear-gradient(45deg,purple,skyblue,green); */
+    background-size: 100% 100%;
+    border-radius: 100%;
+    animation-name: ballAnimation;
+    animation-duration: 10s;
+}
+@keyframes ballAnimation {
+    0%,100%{
+        transform: translate(0px,0px) rotate(0deg) scale(0.5);
+    }
+    20%{
+        transform: translate(50vw,87vh) rotate(360deg) scale(2);
+    }
+    60%{
+        transform: translate(96vw,50vh) rotate(0deg) scale(1);
+    }
+    80%{
+        transform: translate(50vw,6vh) rotate(0deg) scale(2.5);
+    }
+    95%{
+        transform: translate(0vw,50vh) rotate(0deg) scale(0);
+    }
+    
+}
