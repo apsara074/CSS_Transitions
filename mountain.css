@@ -1,0 +1,53 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    width: 100%;
+    height: 80vh;
+    background-image:
+        url(../../asset/img/leftmountain.png),  /* Left big mountain */
+        url(../../asset/img/rightmountain.png), /* Right big mountain */
+        url(../../asset/img/rightmountain.png), /* Right small mountain */
+        url(../../asset/img/leftmountain.png),  /* Left small mountain */
+        url(../../asset/img/person1.png),       /* Person with moon */
+        url(../../asset/img/blacksky.jpg);      /* Sky background */
+
+    background-size:
+        600px,  
+        600px,  
+        400px,  
+        400px, 
+        320px, 
+        100%;  
+
+    background-position:
+        45% bottom,   
+        55% bottom,   
+        48% bottom,    
+        52% bottom,   
+        center bottom, 
+        bottom left;  
+
+    background-repeat: no-repeat;
+    transition: background-position 1.5s, background-size 1.5s;
+}
+
+header:hover {
+    background-size:
+        600px,  
+        600px,  
+        400px,  
+        400px,  
+        350px,  
+        100%;   
+
+    background-position:
+        5% bottom,    
+        95% bottom,   
+        15% bottom,  
+        85% bottom,
+        center bottom, 
+        center right; 
+}

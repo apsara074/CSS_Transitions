@@ -1,0 +1,93 @@
+/* li::marker{
+    content: "😍";
+}
+#apple::marker{
+    content: "🍎";
+}
+#mango::marker{
+    content:"🥭" ;
+}
+#banana::marker{
+    content: "🍌";
+}
+#pineapple::marker{
+    content: "🍍";
+}
+p{
+    width: 100%;
+    height: 300px;
+    background-color: pink;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+p::-webkit-scrollbar{
+    background-image: linear-gradient(skyblue,orange);
+    border-radius: 10px;
+}
+p::-webkit-scrollbar-thumb{
+    background-image: linear-gradient(purple,white);
+    border-radius: 20px;
+    
+} */
+
+
+
+                                      /* CHAT GPT */
+
+/* Base slider */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 320px;         /* change width as needed */
+  height: 6px;          /* track thickness */
+  background: transparent;
+}
+
+/* Track - WebKit & Blink (Edge/Chrome) */
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #4caf50, #a5d6a7);
+}
+
+/* Track - Firefox */
+input[type="range"]::-moz-range-track {
+  height: 6px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #4caf50, #a5d6a7);
+}
+
+/* ========== THUMB ========== */
+
+/* WebKit/Chrome/Edge thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 40px;               /* thumb box width */
+  height: 40px;              /* thumb box height */
+  margin-top: -17px;         /* center the 40px thumb over 6px track:
+                               -( (thumbHeight - trackHeight) / 2 ) => -( (40-6)/2 ) = -17 */
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  /* emoji as SVG data-URI (percent-encoded emoji) */
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><text x='50%' y='50%' font-size='28' text-anchor='middle' dominant-baseline='middle'>%F0%9F%98%83</text></svg>");
+  cursor: pointer;
+}
+
+/* Firefox thumb */
+input[type="range"]::-moz-range-thumb {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><text x='50%' y='50%' font-size='28' text-anchor='middle' dominant-baseline='middle'>%F0%9F%98%83</text></svg>");
+  cursor: pointer;
+}
+
+/* optional: remove focus outline */
+input[type="range"]:focus { outline: none; }
